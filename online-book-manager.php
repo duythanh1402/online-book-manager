@@ -55,3 +55,4 @@ register_activation_hook(__FILE__, 'obm_create_database_table');
 require_once plugin_dir_path(__FILE__) . 'includes/admin-functions.php';
 require_once plugin_dir_path(__FILE__) . 'includes/frontend-functions.php';
 require_once plugin_dir_path(__FILE__) . 'includes/ocr-functions.php';
+echo 'test webhook';
