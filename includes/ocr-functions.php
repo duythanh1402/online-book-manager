@@ -1,11 +1,12 @@
 <?php
-function obm_ocr_page($file_path) {
-    // Cài đặt Google Cloud Vision API qua Composer trước
-    require_once plugin_dir_path(__FILE__) . '../../vendor/autoload.php';
-    use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+require_once plugin_dir_path(__FILE__) . '../../vendor/autoload.php';
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
+function obm_ocr_page($file_path) {
     try {
-        $client = new ImageAnnotatorClient(['credentials' => 'path/to/your/credentials.json']);
+        $client = new ImageAnnotatorClient([
+            'credentials' => plugin_dir_path(__FILE__) . '../../credentials.json'
+        ]);
         $image = file_get_contents($file_path);
         $response = $client->textDetection($image);
         $texts = $response->getTextAnnotations();
