@@ -1,0 +1,12 @@
+.obm-book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.obm-book img {
+    width: 100px;
+    height: auto;
+}
+.obm-book-pages img {
+    max-width: 100%;
+}
