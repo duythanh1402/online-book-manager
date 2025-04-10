@@ -1,6 +1,6 @@
 <?php
 require_once plugin_dir_path(__FILE__) . '../../vendor/autoload.php';
-use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient; 
 
 function obm_ocr_page($file_path) {
     try {
